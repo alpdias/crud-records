@@ -3,7 +3,7 @@ import pymysql
 from time import sleep
 from datetime import date
 
-numeroId = int(input('ID'))
+numeroID = int(input('ID'))
 empresa = str(input('Empresa'))
 cnpj = str(input('CNPJ'))
 tributacao = str(input('Tributação'))
