@@ -1,13 +1,20 @@
+# imported libraries
 import os
 import pymysql
 from time import sleep
 from datetime import date
+# main program
+print('customer base')
 
-numeroID = int(input('ID: '))
-empresa = str(input('Empresa: '))
-cnpj = str(input('CNPJ: '))
-tributacao = str(input('Tributação: '))
+menu = ['customers', 'search', 'include', 'changes', 'export']
+for index, listItems in enumerate(menu):
+    print(f'[{index}] {listItems}')
+
+numberID = int(input('ID: '))
+company = str(input('Company Name: '))
+register = str(input('Registration Number: '))
+tax = str(input('Tax: '))
 email = str(input('E-mail: '))
-telefone = str(input('Telefone: '))
-endereco = str(input('Endereço: '))
-situacao = str(input('Situação: '))
+telephone = str(input('Phone Number: '))
+address = str(input('Address: '))
+situation = str(input('Current Situation: '))
