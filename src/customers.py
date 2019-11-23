@@ -3,6 +3,18 @@ import os
 import pymysql
 from time import sleep
 from datetime import date
+# functions
+def returnConnection():
+    connection = pymysql.connect(
+        host = 'localhost',
+        database = 'customers',
+        user = 'root',
+        passwd = '',
+    )
+    cursor = connection.cursor()
+    return cursor
+
+
 # main program
 print('')
 print('customer base')
@@ -18,7 +30,7 @@ register = str(input('Registration Number: '))
 tax = str(input('Tax: '))
 email = str(input('E-mail: '))
 telephone = str(input('Phone Number: '))
-address = str(input('Address: '))
+contactAddress = str(input('Address: '))
 situation = str(input('Current Situation: '))
 ''' 
 print('')
