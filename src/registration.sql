@@ -1,4 +1,4 @@
-CREATE TABLE registration (
+/* CREATE TABLE registration (
     id,
     company,
     register,
@@ -9,3 +9,4 @@ CREATE TABLE registration (
     situation,
     PRIMARY KEY (id)
 );
+*\
