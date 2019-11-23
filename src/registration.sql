@@ -1,11 +1,12 @@
-/* CREATE TABLE registration (
+/* 
+CREATE TABLE registration (
     id,
     company,
     register,
     tax,
     email,
     telephone,
-    contactAddress,
+    office,
     situation,
     PRIMARY KEY (id)
 );

@@ -30,7 +30,7 @@ register = str(input('Registration Number: '))
 tax = str(input('Tax: '))
 email = str(input('E-mail: '))
 telephone = str(input('Phone Number: '))
-contactAddress = str(input('Address: '))
+office = str(input('Office Address: '))
 situation = str(input('Current Situation: '))
 ''' 
 print('')
