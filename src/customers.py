@@ -23,7 +23,13 @@ menu = ['customers', 'search', 'include', 'changes', 'export']
 for index, listItems in enumerate(menu):
     print(f'[{index}] {listItems}')
 
-'''
+# customers
+cursor = returnConnection()
+result = cursor.execute('SELECT * FROM registration')
+for result in cursor:
+    print(result)
+
+# include
 numberID = int(input('ID: '))
 company = str(input('Company Name: '))
 register = str(input('Registration Number: '))
@@ -32,5 +38,5 @@ email = str(input('E-mail: '))
 telephone = str(input('Phone Number: '))
 office = str(input('Office Address: '))
 situation = str(input('Current Situation: '))
-''' 
+
 print('')
