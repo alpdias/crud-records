@@ -3,6 +3,7 @@ import os
 import pymysql
 from time import sleep
 from datetime import date
+
 # functions
 def returnConnection():
     connection = pymysql.connect(
@@ -25,6 +26,7 @@ for index, listItems in enumerate(menu):
 print('[0] to quit')
 print('')
 selectOption = int(input('select an option: '))
+
 # customers
 if selectOption == 1:
     print('')
@@ -34,6 +36,7 @@ if selectOption == 1:
     result = cursor.execute('SELECT * FROM registration')
     for result in cursor:
         print(result)
+
 #search
 
 # include
