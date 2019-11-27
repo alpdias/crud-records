@@ -19,4 +19,5 @@ INSERT INTO registration VALUES
 (2,'Apple','L000000312312','sales','apple@apple.com','455-444-1312','California','inactive'),
 (3,'Amazon','P000000123432','income','amazon@amazon.com','321-656-8675','Texas','active'),
 (4,'walmart','C000000456987','sales','walmart@walmart.com','345-123-0000','Chicago','active'),
-(5, 'Xiaomi', 'X000000345678', 'sales', 'xiaomi@xiaomi.com', '678-678-9999', 'China', 'active');
+(5, 'Xiaomi', 'X000000345678', 'sales', 'xiaomi@xiaomi.com', '678-678-9999', 'China', 'active'),
+(6, 'Tesla', 'T000000134434', 'income', 'tesla@tesla.com', '999-999-6666', 'EUA', 'inactive');

@@ -10,16 +10,16 @@ cursor = connection.cursor()
 
 # main program
 print('')
-print('customer base')
+print('Records Registration CRUD')
 print('')
-menu = ['customers', 'search', 'include', 'changes', 'export']
+menu = ['records list', 'records search', 'add new record', 'change record', 'export table', 'import table']
 for index, listItems in enumerate(menu):
     print(f'[{index + 1}] {listItems}')
-print('[0] to quit')
+print('[0] exit the program')
 print('')
-selectOption = int(input('select an option: '))
+selectOption = int(input('select an option to perform: '))
 
-# customers
+# records list
 if selectOption == 1:
     print('')
     print('list of registered records')
@@ -28,12 +28,12 @@ if selectOption == 1:
     for result in cursor:
         print(result)
 
-#search
+# records search
 
-# include
+# add new record
 if selectOption == 3:
     print('')
-    print('to add a new record')
+    print('fill in to add a new record')
     print('')
     numberID = str(input('ID: '))
     company = str(input('Company Name: '))
@@ -43,12 +43,14 @@ if selectOption == 3:
     telephone = str(input('Phone Number: '))
     office = str(input('Office Address: '))
     situation = str(input('Current Situation: '))
-    cursor.execute("INSERT INTO registration (id, company, register, tax, email, telephone, office, situation) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
-                    (numberID, company, register, tax, email, telephone, office, situation))
+    cursor.execute("INSERT INTO registration (id, company, register, tax, email, telephone, office, situation) \
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, company, register, tax, email, telephone, office, situation))
     connection.commit()
 
-#changes
+# change record
 
-#export
+# export table
+
+# import table
 
 print('')
