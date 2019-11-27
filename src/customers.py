@@ -5,16 +5,8 @@ from time import sleep
 from datetime import date
 
 # functions
-def returnConnection():
-    connection = pymysql.connect(
-        host = 'localhost',
-        database = 'customers',
-        user = 'root',
-        passwd = '',
-    )
-    cursor = connection.cursor()
-    return cursor
-
+connection = pymysql.connect(host = 'localhost', database = 'customers', user = 'root', passwd = '')
+cursor = connection.cursor()
 
 # main program
 print('')
@@ -32,7 +24,6 @@ if selectOption == 1:
     print('')
     print('list of registered records')
     print('')
-    cursor = returnConnection()
     result = cursor.execute('SELECT * FROM registration')
     for result in cursor:
         print(result)
@@ -44,7 +35,7 @@ if selectOption == 3:
     print('')
     print('to add a new record')
     print('')
-    numberID = int(input('ID: '))
+    numberID = str(input('ID: '))
     company = str(input('Company Name: '))
     register = str(input('Registration Number: '))
     tax = str(input('Tax: '))
@@ -52,6 +43,9 @@ if selectOption == 3:
     telephone = str(input('Phone Number: '))
     office = str(input('Office Address: '))
     situation = str(input('Current Situation: '))
+    cursor.execute("INSERT INTO registration (id, company, register, tax, email, telephone, office, situation) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)",
+                    (numberID, company, register, tax, email, telephone, office, situation))
+    connection.commit()
 
 #changes
 
