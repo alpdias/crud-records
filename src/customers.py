@@ -24,7 +24,9 @@ if selectOption == 1:
     print('')
     print('list of registered records')
     print('')
-    result = cursor.execute('SELECT * FROM registration')
+    nameTable = str(input('select table to view: '))
+    print('')
+    result = cursor.execute(f'SELECT * FROM {nameTable}')
     for result in cursor:
         print(result)
 
