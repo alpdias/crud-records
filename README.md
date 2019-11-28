@@ -1,4 +1,4 @@
-# CRUD Python Customers
+# CRUD Python
 
 Python CRUD with MySQL Database Connection
 
