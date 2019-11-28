@@ -79,4 +79,5 @@ INSERT INTO people VALUES
 (58,'Carlos Camargo','Programador','2005-02-22','M',124.65,1.33,'Brasil'),
 (59,'Philppe Oliveira','Aux. Administrativo','2000-05-23','M',105.10,2.19,'Brasil'),
 (60,'Dayana Dias','Professor','1993-05-30','F',88.30,1.66,'Angola'),
-(61,'Silvana Albuquerque','Programador','1999-05-22','F',56.00,1.50,'Brasil');
+(61,'Silvana Albuquerque','Programador','1999-05-22','F',56.00,1.50,'Brasil'),
+(62,'João Pereira','Ilustrador','1994, 9, 2','M',78.00,1.78,'Russia');
