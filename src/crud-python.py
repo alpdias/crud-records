@@ -24,6 +24,9 @@ if selectOption == 1:
     print('')
     print('records list')
     print('')
+    print('tables available to view:')
+    # add list of available tables
+    print('')
     nameTable = str(input('select table to view: '))
     print('')
     result = cursor.execute(f'SELECT * FROM {nameTable}')
