@@ -12,7 +12,7 @@ cursor = connection.cursor()
 print('')
 print('CRUD - Records List')
 print('')
-menu = ['records list', 'records search', 'add new record', 'change record', 'export table', 'import table']
+menu = ['records list', 'records search', 'add new record', 'change record', 'delete record', 'export table', 'import table']
 for index, listItems in enumerate(menu):
     print(f'[{index + 1}] {listItems}')
 print('[0] exit the program')
@@ -24,12 +24,7 @@ if selectOption == 1:
     print('')
     print('records list')
     print('')
-    print('tables available to view:')
-    # add list of available tables
-    print('')
-    nameTable = str(input('select table to view: '))
-    print('')
-    result = cursor.execute(f'SELECT * FROM {nameTable}')
+    result = cursor.execute(f'SELECT * FROM people')
     for result in cursor:
         print(result)
 
@@ -53,6 +48,8 @@ if selectOption == 3:
     connection.commit()
 
 # change record
+
+# delete record
 
 # export table
 
