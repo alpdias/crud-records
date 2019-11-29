@@ -22,9 +22,9 @@ selectOption = int(input('select an option to perform: '))
 # records list
 if selectOption == 1:
     print('')
-    print('records list')
+    print('record list')
     print('')
-    result = cursor.execute(f'SELECT * FROM people')
+    result = cursor.execute('SELECT * FROM people')
     for result in cursor:
         print(result)
 
