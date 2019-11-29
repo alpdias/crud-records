@@ -29,6 +29,12 @@ if selectOption == 1:
         print(result)
 
 # records search
+if selectOption == 2:
+    print('')
+    searchRecord = int(input('select ID to view log: '))
+    print('')
+    searchID = cursor.execute('SELECT * FROM people')
+    print(searchID)
 
 # add new record
 if selectOption == 3:
