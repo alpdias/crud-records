@@ -33,8 +33,8 @@ if selectOption == 2:
     print('')
     searchRecord = int(input('select ID to view log: '))
     print('')
-    searchID = cursor.execute('SELECT * FROM people')
-    print(searchID)
+    searchID = cursor.execute(f'SELECT * FROM people WHERE id = {searchRecord}')
+    print(cursor.fetchone())
 
 # add new record
 if selectOption == 3:
