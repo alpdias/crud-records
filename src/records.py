@@ -77,6 +77,13 @@ if established == 1:
         print(cursor.fetchone())
         print('')
         confirmDelete = str(input('Do you really want to delete this record? [Y/N] ')).strip().upper()
+        if confirmDelete == 'S':
+            try:
+                deletedID = cursor.execute(f'DELETE FROM people WHERE id = {deleteID}')
+                print('successfully deleted record, see list of records to view')
+            except:
+                print('error deleting record, check input or connection')
+        print('')
 
     # export table
 
