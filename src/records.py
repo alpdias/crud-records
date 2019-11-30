@@ -53,7 +53,7 @@ if established == 1:
         numberID = str(input('ID (empty to self fill):  '))
         fullName = str(input('Full Name: '))
         profession = str(input('Profession: '))
-        birth = str(input('Birth [yyyy/mm/dd]: '))
+        birth = str(input('Birth [yyyy-mm-dd]: '))
         genre = str(input('Genre [M/F]: '))
         bodyweight = str(input('Body Weight: '))
         height = str(input('Height: '))
@@ -65,6 +65,18 @@ if established == 1:
     # change record
 
     # delete record
+    if selectOption == 5:
+        print('')
+        print('select an ID to delete a record')
+        print('')
+        deleteID = int(input('ID to delete: '))
+        deletedID = cursor.execute(f'SELECT * FROM people WHERE id = {deleteID}')
+        print('')
+        print('selected record:')
+        print('')
+        print(cursor.fetchone())
+        print('')
+        confirmDelete = str(input('Do you really want to delete this record? [Y/N] ')).strip().upper()
 
     # export table
 
