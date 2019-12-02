@@ -44,9 +44,11 @@ if established == 1:
         print('')
         searchID = cursor.execute(f'SELECT * FROM people WHERE id = {searchRecord}')
         connection.commit()
-        print(cursor.fetchone())
-        
-        # add exception for record not found
+        resultSearch = cursor.fetchone()
+        if resultSearch == None:
+            print('record not found see record list')
+        else:
+            print(resultSearch)
 
     # add new record
     if selectOption == 3:
