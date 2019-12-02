@@ -1,4 +1,4 @@
-# CRUD Python Records
+# CRUD Records Python
 
 Python CRUD with MySQL Database Connection
 
