@@ -56,23 +56,59 @@ if established == 1:
         print('fill in to add a new record')
         print('')
         numberID = str(input('ID (empty to self fill):  '))
-        fullName = str(input('Full Name: '))
-        profession = str(input('Profession: '))
-        birth = str(input('Birth [yyyy-mm-dd]: '))
-        genre = str(input('Genre [M/F]: '))
-        bodyweight = str(input('Body Weight: '))
-        height = str(input('Height: '))
-        nationality = str(input('Nationality: '))
+        fullName = str(input('full Name: '))
+        profession = str(input('profession: '))
+        birth = str(input('birth [yyyy-mm-dd]: '))
+        genre = str(input('genre [M/F]: '))
+        bodyweight = str(input('body Weight: '))
+        height = str(input('height: '))
+        nationality = str(input('nationality: '))
         cursor.execute("INSERT INTO people (id, fullname, profession, birth, genre, bodyweight, height, nationality)   \
                         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, fullName, profession, birth, genre, bodyweight, height, nationality))
         connection.commit()
 
     # change record
+    if selectOption == 4:
+        print('')
+        print('select ID to change a record')
+        print('')
+        changeID = int(input('ID to change: '))
+        print('')
+        listOptions = ['id', 'fullname', 'profession', 'birth', 'genre', 'bodyweight', 'height', 'nationality']
+        for index, listItems in enumerate(listOptions):
+            print(f'[{index + 1}] {listItems}')
+        print('')
+        changeColumn = int(input('select the column number you wish to modify: '))
+        if changeColumn == 1:
+            changeColumn = 'id'
+        elif changeColumn == 2:
+            changeColumn = 'fullname'
+        elif changeColumn == 3:
+            changeColumn = 'profession'
+        elif changeColumn == 4:
+            changeColumn = 'birth'
+        elif changeColumn == 5:
+            changeColumn = 'genre'
+        elif changeColumn == 6:
+            changeColumn = 'bodyweight'
+        elif changeColumn == 7:
+            changeColumn = 'height'
+        elif changeColumn == 8:
+            changeColumn = 'nationality'
+        newChange = str(input('new value: '))
+        try:
+            changeModify = cursor.execute(f"UPDATE people SET {changeColumn} = '{newChange}' WHERE id = {changeID}")
+            connection.commit()
+            print('')
+            print('successful modification')
+        except:
+            print('')
+            print('error trying to modify see table or its connection')
 
     # delete record
     if selectOption == 5:
         print('')
-        print('select an ID to delete a record')
+        print('select ID to delete a record')
         print('')
         deleteID = int(input('ID to delete: '))
         deletedID = cursor.execute(f'SELECT * FROM people WHERE id = {deleteID}')
@@ -96,5 +132,5 @@ if established == 1:
 
 elif established == 0:
     print('check database connection and try again')
-    
+
 print('')
