@@ -40,7 +40,7 @@ if established == 1:
     # records search
     if selectOption == 2:
         print('')
-        searchRecord = int(input('select ID to view log: '))
+        searchRecord = int(input('select ID to search: '))
         print('')
         searchID = cursor.execute(f'SELECT * FROM people WHERE id = {searchRecord}')
         connection.commit()
@@ -71,7 +71,7 @@ if established == 1:
             print('successful inclusion')
         except:
             print('')
-            print('not done check your table or connection')
+            print('not done inclusion, check your input or connection')
 
     # change record
     if selectOption == 4:
@@ -121,7 +121,7 @@ if established == 1:
         print('')
         print('selected record:')
         print('')
-        print(cursor.fetchone())
+        print(cursor.fetchone()) # add except to 'None' result in SQL
         print('')
         confirmDelete = str(input('Do you really want to delete this record? [Y/N] ')).strip().upper()
         if confirmDelete == 'Y':
