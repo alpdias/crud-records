@@ -78,7 +78,7 @@ if established == 1:
         print('')
         print('select ID to change a record')
         print('')
-        changeID = int(input('ID to change: '))
+        changeID = int(input('ID to change: ')) # add except to 'None' result in SQL
         print('')
         listOptions = ['id', 'fullname', 'profession', 'birth', 'genre', 'bodyweight', 'height', 'nationality']
         for index, listItems in enumerate(listOptions):
