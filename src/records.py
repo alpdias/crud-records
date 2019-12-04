@@ -63,9 +63,15 @@ if established == 1:
         bodyweight = str(input('body Weight: '))
         height = str(input('height: '))
         nationality = str(input('nationality: '))
-        cursor.execute("INSERT INTO people (id, fullname, profession, birth, genre, bodyweight, height, nationality)   \
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, fullName, profession, birth, genre, bodyweight, height, nationality))
-        connection.commit()
+        try:
+            cursor.execute("INSERT INTO people (id, fullname, profession, birth, genre, bodyweight, height, nationality)   \
+                            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, fullName, profession, birth, genre, bodyweight, height, nationality))
+            connection.commit()
+            print('')
+            print('successful inclusion')
+        except:
+            print('')
+            print('not done check your table or connection')
 
     # change record
     if selectOption == 4:
@@ -103,7 +109,7 @@ if established == 1:
             print('successful modification')
         except:
             print('')
-            print('error trying to modify see table or its connection')
+            print('error trying to modify, check table or connection')
 
     # delete record
     if selectOption == 5:
@@ -122,8 +128,10 @@ if established == 1:
             try:
                 deletedID = cursor.execute(f'DELETE FROM people WHERE id = {deleteID}')
                 connection.commit()
+                print('')
                 print('successfully deleted record, see list of records to view')
             except:
+                print('')
                 print('error deleting record, check input or connection')
 
     # export table
