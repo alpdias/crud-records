@@ -1,3 +1,6 @@
+'''
+@Autor: Paulo https://github.com/alpdias
+'''
 # imported libraries
 import os
 import pymysql
