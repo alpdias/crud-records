@@ -135,8 +135,23 @@ if established == 1:
                 print('error deleting record, check input or connection')
 
     # export table
-
+    if selectOption == 6:
+        print('')
+        print('export table')
+        print('')
+        nameExport = str(input('export file name: '))
+        try:
+            wayPath = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
+            wayExit = wayPath + f'{nameExport}.csv'
+            newPath = open(wayExit, 'w')
+            print('')
+            print('file successfully exported')
+        except:
+            print('unexpected error, file not exported')
+        
     # import table
+    if selectOption == 7:
+       pass
 
 elif established == 0:
     print('check database connection and try again')
