@@ -7,7 +7,7 @@ Microsoft VSCode 1.38.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 EN-US </br>
 
-Note: The table 'registration.sql' used as an example has its records written in Portuguese (pt-BR)
+Note: The registration table within the 'registration.sql' file used as an example has its records written in Portuguese language (pt-BR)
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -20,6 +20,7 @@ Microsoft VSCode 1.38.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 EN-US </br> 
 
-Observação: A tabela 'registration.sql' utilizada como exemplo está com os seus registros escritos na língua portuguesa (pt-BR)
+Observação: A tabela de registros, dentro do arquivo 'registration.sql' utilizada como exemplo está com os seus registros escritos na
+língua portuguesa (pt-BR)
 
 -----------------------------------------------------------------------------------------------------------------------------
