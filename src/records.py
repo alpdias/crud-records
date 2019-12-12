@@ -5,7 +5,7 @@
 import os
 import pymysql
 from time import sleep
-from datetime import date
+from datetime import date 
 
 # connection
 try:
