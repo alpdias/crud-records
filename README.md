@@ -1,4 +1,4 @@
-# CRUD Records Python
+# CRUD records Python
 
 Python CRUD with MySQL Database Connection
 
@@ -11,7 +11,7 @@ Note: The registration table, within the file 'registration.sql' used as an exam
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-# CRUD Registros em Python
+# CRUD registros em Python
 
 CRUD em Python usando uma conexão com banco de dados MySQL
 
