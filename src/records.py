@@ -3,6 +3,7 @@
 Criado em 12/2019
 @Autor: Paulo https://github.com/alpdias
 '''
+
 # imported libraries
 import os
 import pymysql
@@ -20,6 +21,7 @@ except:
     print('error connecting database')
     established = 0
 
+# if connection is established
 if established == 1:
 
     # main program
@@ -158,6 +160,7 @@ if established == 1:
     if selectOption == 7:
        pass
 
+# if connection is not established
 elif established == 0:
     print('check database connection and try again')
 
