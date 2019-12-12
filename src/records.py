@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 '''
+Criado em 12/2019
 @Autor: Paulo https://github.com/alpdias
 '''
 # imported libraries
