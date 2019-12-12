@@ -1,6 +1,6 @@
 # CRUD records Python
 
-Python CRUD with MySQL Database Connection
+Python CRUD with MySQL database connection
 
 Python 3.7.4 </br>
 Microsoft VSCode 1.38.1 </br>
