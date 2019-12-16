@@ -1,4 +1,4 @@
--- @Autor: Paulo https://github.com/alpdias
+-- @Author Paulo https://github.com/alpdias
 
 -- table creation and its columns
 
