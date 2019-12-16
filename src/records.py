@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
-Criado em 12/2019
-@Autor: Paulo https://github.com/alpdias
+Created in 12/2019
+@Author: Paulo https://github.com/alpdias
 '''
 
 # imported libraries
