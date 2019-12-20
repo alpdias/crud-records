@@ -149,8 +149,9 @@ if established == 1:
         nameExport = str(input('export file name: '))
         try:
             wayPath = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
-            wayExit = wayPath + f'{nameExport}.csv'
+            wayExit = wayPath + f'{nameExport}.txt'
             newPath = open(wayExit, 'w')
+            newPath.close()
             print('')
             print('file successfully exported')
         except:
