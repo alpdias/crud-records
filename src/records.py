@@ -9,6 +9,7 @@ import os
 import pymysql
 from time import sleep
 from datetime import date 
+import csv
 
 # connection
 try:
@@ -148,13 +149,17 @@ if established == 1:
         print('')
         nameExport = str(input('export file name: '))
         try:
-            wayPath = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
-            wayExit = wayPath + f'{nameExport}.txt'
-            newPath = open(wayExit, 'w')
-            newPath.close()
+            result = cursor.execute('SELECT * FROM people')
+            wayExport = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
+            newFile = wayExport + f'{nameExport}.txt'
+            with open(newFile, 'w', newline='') as lines:
+                writerFile = csv.writer(lines)
+                for row in cursor:
+                    writerFile.writerow(row)
             print('')
             print('file successfully exported')
         except:
+            print('')
             print('unexpected error, file not exported')
         
     # import table
