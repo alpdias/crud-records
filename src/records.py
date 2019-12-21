@@ -15,80 +15,88 @@ import csv
 try:
     connection = pymysql.connect(host = 'localhost', database = 'people', user = 'root', passwd = '')
     cursor = connection.cursor()
-    print('connection established')
+    print('\033[0;32mCONNECTION ESTABLISHED\033[m')
     established = 1
+    os.system('cls')
 except:
     print('')
-    print('error connecting database')
+    print('\033[0;31mERROR CONNECTING DATABASE\033[m')
     established = 0
 
 # if connection is established
 if established == 1:
 
     # main program
+    os.system('cls')
     print('')
-    print('CRUD - Records List')
+    print('CRUD - RECORDS LIST')
     print('')
-    menu = ['records list', 'records search', 'add new record', 'change record', 'delete record', 'export table', 'import table']
+    menu = ['Records list', 'Records search', 'Add new record', 'Change record', 'Delete record', 'Export table', 'Import table']
     for index, listItems in enumerate(menu):
-        print(f'[{index + 1}] {listItems}')
-    print('[0] exit the program')
+        print(f'\033[0;36m[{index + 1}]\033[m {listItems}')
+    print('\033[0;31m[0]\033[m Exit the program')
     print('')
-    selectOption = int(input('select an option to perform: '))
+    selectOption = int(input('SELECT AN OPTION TO PERFORM: '))
 
     # records list
     if selectOption == 1:
-        print('')
-        print('record list')
-        print('')
-        result = cursor.execute('SELECT * FROM people')
-        for result in cursor:
-            print(result)
+        os.system('cls')
+        print(' ')
+        try:
+            result = cursor.execute('SELECT * FROM people')
+            for result in cursor:
+                print(result)
+        except:
+            print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
 
     # records search
     if selectOption == 2:
+        os.system('cls')
         print('')
-        searchRecord = int(input('select ID to search: '))
+        searchRecord = int(input('Select ID to search: '))
         print('')
         searchID = cursor.execute(f'SELECT * FROM people WHERE id = {searchRecord}')
         connection.commit()
         resultSearch = cursor.fetchone()
         if resultSearch == None:
-            print('record not found see record list')
+            print('\033[0;31mRECORD NOT FOUND SEE RECORD LIST\033[m')
         else:
             print(resultSearch)
 
     # add new record
     if selectOption == 3:
+        os.system('cls')
         print('')
-        print('fill in to add a new record')
+        print('Fill in to add a new record...')
         print('')
         numberID = str(input('ID (empty to self fill):  '))
-        fullName = str(input('full Name: '))
-        profession = str(input('profession: '))
-        birth = str(input('birth [yyyy-mm-dd]: '))
-        genre = str(input('genre [M/F]: '))
-        bodyweight = str(input('body Weight: '))
-        height = str(input('height: '))
-        nationality = str(input('nationality: '))
+        fullName = str(input('Full name: '))
+        profession = str(input('Profession: '))
+        birth = str(input('Birth [yyyy-mm-dd]: '))
+        genre = str(input('Genre [M/F]: '))
+        bodyweight = str(input('Body weight: '))
+        height = str(input('Height: '))
+        nationality = str(input('Nationality: '))
+
+        # add inclusion confirmation
+        
         try:
             cursor.execute("INSERT INTO people (id, fullname, profession, birth, genre, bodyweight, height, nationality)   \
                             VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, fullName, profession, birth, genre, bodyweight, height, nationality))
             connection.commit()
             print('')
-            print('successful inclusion')
+            print('\033[0;32mSUCCESSFUL INCLUSION\033[m')
         except:
             print('')
-            print('not done inclusion, check your input or connection')
+            print('\033[0;31mNOT DONE INCLUSION, CHECK YOUR INPUT OR CONNECTION\033[m')
 
     # change record
     if selectOption == 4:
+        os.system('cls')
         print('')
-        print('select ID to change a record')
+        changeID = int(input('Registration ID for change: ')) 
         print('')
-        changeID = int(input('ID to change: ')) # add except to 'None' result in SQL
-        print('')
-        listOptions = ['id', 'fullname', 'profession', 'birth', 'genre', 'bodyweight', 'height', 'nationality']
+        listOptions = ['ID', 'Full Name', 'Profession', 'Birth', 'Genre', 'Body weight', 'Height', 'Nationality']
         for index, listItems in enumerate(listOptions):
             print(f'[{index + 1}] {listItems}')
         print('')
@@ -110,6 +118,9 @@ if established == 1:
         elif changeColumn == 8:
             changeColumn = 'nationality'
         newChange = str(input('new value: '))
+
+        # add except to 'None' result in SQL
+
         try:
             changeModify = cursor.execute(f"UPDATE people SET {changeColumn} = '{newChange}' WHERE id = {changeID}")
             connection.commit()
@@ -168,6 +179,6 @@ if established == 1:
 
 # if connection is not established
 elif established == 0:
-    print('check database connection and try again')
+    print('\033[0;31mCHECK DATABASE CONNECTION AND TRY AGAIN\033[m')
 
 print('')
