@@ -17,6 +17,7 @@ try:
     cursor = connection.cursor()
     print('\033[0;32mCONNECTION ESTABLISHED\033[m')
     established = 1
+    sleep(3)
     os.system('cls')
 except:
     print('')
@@ -24,7 +25,7 @@ except:
     established = 0
 
 # if connection is established
-if established == 1:
+if established == 0:
 
     # main program
     os.system('cls')
@@ -55,6 +56,9 @@ if established == 1:
         print('')
         searchRecord = int(input('Select ID to search: '))
         print('')
+
+        # add try and except
+
         searchID = cursor.execute(f'SELECT * FROM people WHERE id = {searchRecord}')
         connection.commit()
         resultSearch = cursor.fetchone()
@@ -96,11 +100,19 @@ if established == 1:
         print('')
         changeID = int(input('Registration ID for change: ')) 
         print('')
+
+        # add registry search
+
+        # add except to 'None' result in SQL
+
+        print('looking for record...') 
+        print('')
+        sleep(2)
         listOptions = ['ID', 'Full Name', 'Profession', 'Birth', 'Genre', 'Body weight', 'Height', 'Nationality']
         for index, listItems in enumerate(listOptions):
             print(f'[{index + 1}] {listItems}')
         print('')
-        changeColumn = int(input('select the column number you wish to modify: '))
+        changeColumn = int(input('Select the column number you wish to modify: '))
         if changeColumn == 1:
             changeColumn = 'id'
         elif changeColumn == 2:
@@ -117,10 +129,8 @@ if established == 1:
             changeColumn = 'height'
         elif changeColumn == 8:
             changeColumn = 'nationality'
-        newChange = str(input('new value: '))
-
-        # add except to 'None' result in SQL
-
+        print(' ')
+        newChange = str(input('New value: '))
         try:
             changeModify = cursor.execute(f"UPDATE people SET {changeColumn} = '{newChange}' WHERE id = {changeID}")
             connection.commit()
