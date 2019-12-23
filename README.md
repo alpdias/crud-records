@@ -7,7 +7,7 @@ Microsoft VSCode 1.38.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 EN-US </br>
 
-Note: The registration table, within the file 'registration.sql' used as an example, has its records written in Portuguese (pt-BR). The code contains commands specific to the Windows system (when using the 'os' library), be aware of this if errors occur when running the program on another system.
+Note: The registration table, within the file 'registration.sql' used as an example, has its records written in Portuguese (pt-BR). The code contains commands specific to the Windows system (when using the 'os' library), be aware of this if errors occur when running the program on another system
 
 -----------------------------------------------------------------------------------------------------------------------------
 
