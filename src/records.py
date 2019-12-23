@@ -54,7 +54,7 @@ if established == 1:
                     print(result)
             except:
                 print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
-            print(' ')
+        print(' ')
 
         # records search
         if selectOption == 2:
@@ -72,7 +72,7 @@ if established == 1:
                     print(resultSearch)
             except:
                 print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
-            print(' ')
+        print(' ')
 
         # add new record
         if selectOption == 3:
@@ -103,7 +103,7 @@ if established == 1:
             else:
                 print(' ')
                 print('\033[0;31mUNREALIZED INCLUSION\033[m')
-            print(' ')
+        print(' ')
 
         # change record
         if selectOption == 4:
@@ -160,6 +160,7 @@ if established == 1:
                 except:
                     print(' ')
                     print('\033[0;31mERROR TRYING TO MODIFY, CHECK TABLE OR CONNECTION\033[m')
+        print(' ')
 
         # delete record
         if selectOption == 5:
@@ -177,7 +178,6 @@ if established == 1:
                     print(resultDeleteSearch)
             except:
                 print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
-            print(' ')
 
 
             # to be continue...
@@ -193,7 +193,8 @@ if established == 1:
                 except:
                     print('')
                     print('error deleting record, check input or connection')
-
+        print(' ')
+        
         # export table
         if selectOption == 6:
             print('')
