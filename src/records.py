@@ -26,11 +26,12 @@ except:
     sleep(1)
     established = 0
 
-while True:
-    # if connection is established
-    if established == 1:
 
-        # main program
+# if connection is established
+if established == 1:
+    
+    # main program
+    while True:
         os.system('cls')
         print(' ')
         print('CRUD - RECORDS LIST')
@@ -231,13 +232,14 @@ while True:
                 print(' ')
                 sleep(1)
                 break
-
+            
+        # invalid option
         else:
             print(' ')
             print('\033[0;31mINVALID OPTION TRY AGAIN\033[m')
             sleep(1)
 
-    # if connection is not established
-    elif established == 0:
+# if connection is not established
+elif established == 0:
         print('\033[0;31mCHECK DATABASE CONNECTION AND TRY AGAIN\033[m')
         print(' ')
