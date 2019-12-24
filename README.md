@@ -2,8 +2,8 @@
 
 Python CRUD using a MySQL database connection to manage records.
 
-Python 3.7.4 </br>
-Microsoft VSCode 1.38.1 </br>
+Python 3.8.0 </br>
+Microsoft VSCode 1.41.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 EN-US </br>
 
@@ -15,8 +15,8 @@ Note: The registration table, within the file 'registration.sql' used as an exam
 
 CRUD em Python usando uma conexão com banco de dados MySQL para gerenciar registros.
 
-Python 3.7.4 </br>
-Microsoft VSCode 1.38.1 </br>
+Python 3.8.0 </br>
+Microsoft VSCode 1.41.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 EN-US </br> 
 
