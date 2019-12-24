@@ -57,6 +57,9 @@ if established == 1:
                 except:
                     print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
                 print(' ')
+                listBreak = str(input('TO EXIT PRESS [e]: '))
+                if listBreak == 'E':
+                    break
 
             # records search
             if selectOption == 2:
@@ -75,6 +78,9 @@ if established == 1:
                 except:
                     print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                 print(' ')
+                searchBreak = str(input('TO EXIT PRESS [e]: '))
+                if searchBreak == 'E':
+                    break
 
             # add new record
             if selectOption == 3:
@@ -106,6 +112,7 @@ if established == 1:
                     print(' ')
                     print('\033[0;31mUNREALIZED INCLUSION\033[m')
                 print(' ')
+                sleep(2)
 
             # change record
             if selectOption == 4:
@@ -130,6 +137,7 @@ if established == 1:
                     print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                     changeIDConnection = 0
                 if changeIDConnection == 1:
+                    print(' ')
                     listOptions = ['ID', 'FULL NAME', 'PROFESSION', 'BIRTH', 'GENRE', 'BODY WEIGHT', 'HEIGHT', 'NATIONALITY']
                     for index, listItems in enumerate(listOptions):
                         print(f'[{index + 1}] {listItems}')
@@ -162,6 +170,7 @@ if established == 1:
                         print(' ')
                         print('\033[0;31mERROR TRYING TO MODIFY, CHECK TABLE OR CONNECTION\033[m')
                 print(' ')
+                sleep(2)
 
             # delete record
             if selectOption == 5:
@@ -198,6 +207,7 @@ if established == 1:
                         print('')
                         print('\033[0;31mREGISTRATION NOT DELETED\033[m')
                 print(' ')
+                sleep(2)
             
             # export table
             if selectOption == 6:
