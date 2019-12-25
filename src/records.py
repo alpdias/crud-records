@@ -57,7 +57,7 @@ if established == 1:
                 except:
                     print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
                 print(' ')
-                listBreak = str(input('TO EXIT PRESS [e]: '))
+                listBreak = str(input('TO EXIT PRESS \033[0;31m[e]\033[m: '))
                 if listBreak == 'E':
                     break
 
@@ -78,7 +78,7 @@ if established == 1:
                 except:
                     print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                 print(' ')
-                searchBreak = str(input('TO EXIT PRESS [e]: '))
+                searchBreak = str(input('TO EXIT PRESS \033[0;31m[e]\033[m: '))
                 if searchBreak == 'E':
                     break
 
@@ -218,8 +218,8 @@ if established == 1:
                     result = cursor.execute('SELECT * FROM people')
                     wayExport = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
                     newFile = wayExport + f'{nameExport}.txt'
-                    with open(newFile, 'w', newline='') as lines:
-                        writerFile = csv.writer(lines)
+                    with open(newFile, 'w', newline='') as exitLines:
+                        writerFile = csv.writer(exitLines)
                         for row in cursor:
                             writerFile.writerow(row)
                     print('')
@@ -233,7 +233,41 @@ if established == 1:
                 
             # import table
             if selectOption == 7:
-                pass
+                os.system('cls')
+                print(' ')
+                importFile = str(input('ENTER FILE.TXT NAME TO IMPORT: '))
+                try:
+                    wayImport = ('C:' + os.sep + 'Users' + os.sep + os.getlogin() + os.sep + 'Desktop' + os.sep)
+                    fileImport = wayImport + f'{importFile}.txt'
+                    with open(fileImport, 'r') as inputLines:
+                        readFile = csv.reader(inputLines)
+                        for row in readFile:
+                            numberID = int(row[0])
+                            fullName = str(row[1])
+                            profession = str(row[2])
+                            birth = str(row[3])
+                            genre = str(row[4])
+                            bodyweight = float(row[5])
+                            height = float(row[6])
+                            nationality = str(row[7])
+
+                            try:
+                                cursor.execute("INSERT INTO people (id, fullname, profession, birth, genre, bodyweight, height, nationality)   \
+                                                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", (numberID, fullName, profession, birth, genre, bodyweight, height, nationality))
+                                connection.commit()
+                                importStatus = 1
+                            except:
+                                importStatus = 0
+                    if importStatus == 1:
+                        print(' ')
+                        print('\033[0;32mSUCCESSFUL IMPORT FILE\033[m')
+                    else:
+                        print(' ')
+                        print('\033[0;31mFILE NOT IMPORTANT, CHECK INPUT FILE\033[m')
+                except:
+                    print('\033[0;31mUNEXPECTED ERROR, CHECK FILE OR CONNECTION\033[m')
+                    print(' ')
+                sleep(2)
 
             # exit program
             if selectOption == 0:

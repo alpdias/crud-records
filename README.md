@@ -1,6 +1,6 @@
 # CRUD Python
 
-Python CRUD using a MySQL database connection to manage records.
+Simple CRUD in Python using a MySQL database connection to manage records and store data. With functions of importing and exporting .txt files in the semicolon separation model (csv).
 
 Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
@@ -17,7 +17,7 @@ Notes:
 
 # CRUD Python
 
-CRUD em Python usando uma conexão com banco de dados MySQL para gerenciar registros.
+Simples CRUD em Python usando uma conexão com banco de dados MySQL para gerenciar registros e guardar dados. Com funções de importar e exportar arquivos em .txt no modelo de separação por ponto e virgula (csv).
 
 Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
