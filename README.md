@@ -4,8 +4,8 @@ Simple CRUD in Python using a MySQL database connection to manage records and st
 
 Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
-Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
-EN-US </br>
+Coding: -&lowast;- coding: utf-8 -&lowast;- </br>
+en-US </br>
 
 Notes: 
 
@@ -22,7 +22,7 @@ Simples CRUD em Python usando uma conexão com banco de dados MySQL para gerenci
 Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
-EN-US </br> 
+en-US </br> 
 
 Observações: 
 
