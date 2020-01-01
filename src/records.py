@@ -285,5 +285,6 @@ if established == 1:
 
 # if connection is not established
 elif established == 0:
+        print(' ')
         print('\033[0;31mCHECK DATABASE CONNECTION AND TRY AGAIN\033[m')
         print(' ')
