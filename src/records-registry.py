@@ -62,10 +62,7 @@ if established == 1:
                     except:
                         print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
                     print('')
-
-
-                # add output and for time and viewing
-
+                    recordBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m2'))
 
                 # records search
                 if selectOption == 2:
@@ -84,10 +81,7 @@ if established == 1:
                     except:
                         print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                     print('')
-
-
-                # add output and for time and viewing
-
+                    searchBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m'))
 
                 # add new record
                 if selectOption == 3:
