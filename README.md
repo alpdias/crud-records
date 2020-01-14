@@ -7,7 +7,7 @@ Microsoft VSCode 1.41.1 </br>
 Coding: -&lowast;- coding: utf-8 -&lowast;- </br>
 en-US </br>
 
-Notes: 
+<strong>Notes:</strong>
 
 * The registration table, within the file 'registration-table.sql' used as an example, has its records written in Portuguese (pt-BR). 
 
@@ -24,7 +24,7 @@ Microsoft VSCode 1.41.1 </br>
 Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 en-US </br> 
 
-Observações: 
+<strong>Observações:</strong>
 
 * A tabela de registros, dentro do arquivo 'registration-table.sql' utilizada como exemplo está com os seus registros escritos na língua portuguesa (pt-BR). 
 
