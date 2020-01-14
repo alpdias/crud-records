@@ -62,7 +62,7 @@ if established == 1:
                     except:
                         print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
                     print('')
-                    recordBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m2'))
+                    recordBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m '))
 
                 # records search
                 if selectOption == 2:
@@ -81,7 +81,7 @@ if established == 1:
                     except:
                         print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                     print('')
-                    searchBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m'))
+                    searchBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m '))
 
                 # add new record
                 if selectOption == 3:
@@ -141,7 +141,7 @@ if established == 1:
                         print('')
                         listOptions = ['ID', 'FULL NAME', 'PROFESSION', 'BIRTH', 'GENRE', 'BODY WEIGHT', 'HEIGHT', 'NATIONALITY']
                         for index, listItems in enumerate(listOptions):
-                            print(f'[{index + 1}] {listItems}')
+                            print(f'\033[0;36m[{index + 1}]\033[m {listItems}')
                         print('')
                         changeColumn = int(input('SELECT THE COLUMN NUMBER YOU WISH TO MODIFY: '))
                         if changeColumn == 1:
