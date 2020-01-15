@@ -29,10 +29,6 @@ except:
 
 # if connection is established
 if established == 1:
-    
-    
-    # add exception for input value error
-    
 
     # main program
     try:
