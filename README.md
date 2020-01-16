@@ -21,7 +21,7 @@ Simples CRUD em Python usando uma conexão com banco de dados MySQL para gerenci
 
 Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
-Códificação: -&lowast;- coding: utf-8 -&lowast;- </br>
+Codificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 en-US </br> 
 
 <strong>Observações:</strong>
