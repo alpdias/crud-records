@@ -7,6 +7,11 @@ Microsoft VSCode 1.41.1 </br>
 Coding: -&lowast;- coding: utf-8 -&lowast;- </br>
 en-US </br>
 
+<strong>Python modules</strong>
+
+> pip install pymysql
+> pip install csv
+
 <strong>Notes:</strong>
 
 * The registration table, within the file 'registration-table.sql' used as an example, has its records written in Portuguese (pt-BR). 
@@ -23,6 +28,11 @@ Python 3.8.0 </br>
 Microsoft VSCode 1.41.1 </br>
 Codificação: -&lowast;- coding: utf-8 -&lowast;- </br>
 en-US </br> 
+
+<strong>Módulos Python</strong>
+
+> pip install pymysql
+> pip install csv
 
 <strong>Observações:</strong>
 
