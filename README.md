@@ -9,7 +9,7 @@ en-US </br>
 
 <strong>Python modules</strong>
 
-> pip install pymysql
+> pip install pymysql </br>
 > pip install csv
 
 <strong>Notes:</strong>
@@ -31,7 +31,7 @@ en-US </br>
 
 <strong>Módulos Python</strong>
 
-> pip install pymysql
+> pip install pymysql </br>
 > pip install csv
 
 <strong>Observações:</strong>
