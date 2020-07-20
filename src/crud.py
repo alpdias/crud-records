@@ -12,7 +12,7 @@ from datetime import date
 import csv
 
 try: # connection
-    connection = pymysql.connect(host = 'localhost', database = 'people', user = 'root', passwd = '012345')
+    connection = pymysql.connect(host = 'localhost', database = 'people', user = 'root', passwd = '')
     cursor = connection.cursor()
     print('')
     print('\033[0;32mCONNECTION ESTABLISHED\033[m')
