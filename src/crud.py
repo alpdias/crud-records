@@ -11,9 +11,8 @@ from time import sleep
 from datetime import date 
 import csv
 
-# connection
-try:
-    connection = pymysql.connect(host = 'localhost', database = 'people', user = 'root', passwd = '')
+try: # connection
+    connection = pymysql.connect(host = 'localhost', database = 'people', user = 'root', passwd = '012345')
     cursor = connection.cursor()
     print('')
     print('\033[0;32mCONNECTION ESTABLISHED\033[m')
@@ -26,11 +25,8 @@ except:
     sleep(1)
     established = 0
 
+if established == 1: # if connection is established
 
-# if connection is established
-if established == 1:
-
-    # main program
     try:
         while True:
             os.system('cls')
@@ -44,11 +40,9 @@ if established == 1:
             print('')
             selectOption = int(input('SELECT AN OPTION TO PERFORM: '))
 
-            # Options
-            if selectOption in [0, 1, 2, 3, 4, 5, 6, 7]:
+            if selectOption in [0, 1, 2, 3, 4, 5, 6, 7]: # Options
 
-                # records list
-                if selectOption == 1:
+                if selectOption == 1: # records list
                     os.system('cls')
                     print('')
                     try:
@@ -58,10 +52,9 @@ if established == 1:
                     except:
                         print('\033[0;31mTABLE NOT FOUND CHECK CONNECTION\033[m')
                     print('')
-                    recordBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m '))
+                    recordBreak = str(input('\033[0;33mPress ENTER or any key and enter to exit...\033[m '))
 
-                # records search
-                if selectOption == 2:
+                if selectOption == 2: # records search
                     os.system('cls')
                     print('')
                     searchRecord = int(input('SELECT ID TO SEARCH: '))
@@ -77,10 +70,9 @@ if established == 1:
                     except:
                         print('\033[0;31mRECORD NOT FOUND, CHECK YOUR INPUT OR CONNECTION\033[m')
                     print('')
-                    searchBreak = str(input('\033[0;33mPress ENTER or any key and enter to stop...\033[m '))
-
-                # add new record
-                if selectOption == 3:
+                    searchBreak = str(input('\033[0;33mPress ENTER or any key and enter to exit...\033[m '))
+                
+                if selectOption == 3: # add new record
                     os.system('cls')
                     print('')
                     print('FILL IN TO ADD A NEW RECORD...')
@@ -111,8 +103,7 @@ if established == 1:
                     print('')
                     sleep(2)
 
-                # change record
-                if selectOption == 4:
+                if selectOption == 4: # change record
                     os.system('cls')
                     print('')
                     changeID = int(input('REGISTRATION ID FOR CHANGE: ')) 
@@ -169,8 +160,7 @@ if established == 1:
                     print('')
                     sleep(2)
 
-                # delete record
-                if selectOption == 5:
+                if selectOption == 5: # delete record
                     os.system('cls')
                     print('')
                     deleteID = int(input('ID TO DELETE: '))
@@ -206,8 +196,7 @@ if established == 1:
                     print('')
                     sleep(2)
                 
-                # export table
-                if selectOption == 6:
+                if selectOption == 6: # export table
                     os.system('cls')
                     print('')
                     nameExport = str(input('EXPORT FILE NAME: '))
@@ -228,8 +217,7 @@ if established == 1:
                         sleep(2)
                     print(' ')
                     
-                # import table
-                if selectOption == 7:
+                if selectOption == 7:  # import table
                     os.system('cls')
                     print(' ')
                     importFile = str(input('ENTER FILE.TXT NAME TO IMPORT: '))
@@ -265,16 +253,14 @@ if established == 1:
                         print('')
                     sleep(2)
 
-                # exit program
-                if selectOption == 0:
+                if selectOption == 0: # exit program
                     print('')
                     print('\033[0;31mPROGRAM FINISHED\033[m')
                     print('')
                     sleep(1)
                     break
                 
-            # invalid option
-            else:
+            else: # invalid option
                 print('')
                 print('\033[0;31mINVALID OPTION TRY AGAIN\033[m')
                 sleep(1)
@@ -283,8 +269,7 @@ if established == 1:
         print('\033[0;33mProgram terminated by the user!\033[m')
         print('')
         
-# if connection is not established
-elif established == 0:
+elif established == 0: # if connection is not established
         print('')
         print('\033[0;31mCHECK DATABASE CONNECTION AND TRY AGAIN\033[m')
         print('')
